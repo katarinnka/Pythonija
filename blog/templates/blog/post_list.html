@@ -1,14 +1,19 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Python i ja</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     </head>
     <body>
 <div>
-    <h1><a href="/">Python i ja</a></h1>
+    <h1>Python i ja</h1>
 </div>
-
+<br>
 {% for post in posts %}
-    <div>
+    <div class= "post"> 
         <p>published: {{ post.published_date }}</p>
         <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaks }}</p>
